@@ -1,0 +1,23 @@
+body, .section{
+	background-color: rgb(255, 249, 221);
+}
+.well{
+	background-color: #FFF4CA;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background-color: #F7AB3B;	
+	color: black;
+}
+.nav-pills>li{
+	color: black;
+}
+a{
+	color: black;
+}
+.tab-content{
+	padding: 10px 10px 10px 10px;
+}
+.page1{ 
+    overflow-y:scroll; 
+    height: 100%;
+}

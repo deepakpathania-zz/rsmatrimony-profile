@@ -1,444 +1,533 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="SHORTCUT ICON" href="guru.ico" />
-    <link href="http://www.maheshwari.org/css/NewSchema/reg.css" rel="stylesheet" />
-    <link href="http://www.maheshwari.org/css/NewSchema/main.css" rel="stylesheet" />
-    <link href="http://www.maheshwari.org/css/flaticons/flaticon.css" rel="stylesheet" />
-    <link href="http://www.maheshwari.org/css/NewSchema/navbar.css" rel="stylesheet" />
-    <link href="http://www.maheshwari.org/css/NewSchema/footer.css" rel="stylesheet" />
-    <link href="http://www.maheshwari.org/css/NewSchema/page.css" rel="stylesheet" />
-    <link href="http://www.maheshwari.org/css/NewSchema/user.css" rel="stylesheet" />
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.pagepiling.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Deepak Pathania - Welcome</title>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+    .row {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    h1{
+        text-decoration: underline;
+    }
+    .col-sm-4 {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 33%;
+    }
+    
+    .panel {
+        width: 100%;
+    }
+    
+    body {
+        background-color: #FFF9DD;
+    }
+    .panel-default>.panel-heading{
+        background-color: #F7822E;
+        border-color: #F7822E;
+        color: black;
+    }
+    .z{
+        z-index: 999;
+    }
+    </style>
+     <script type="text/javascript">
+        $(document).ready(function ()
+         {
+            $("#test").hide();
+            $("#preview").click(function ()
+             {
+                $("#test").show();
+                $("#preview").hide();
+            });
+
+        });
+    </script>
 </head>
 
-<body>
-    <div id="fb-root"></div>
-    <div id="head">
-        <div class="menu-wrapper" style="background-color: #E84E00">
-            <div class="image-wrapper menu-hide">
-                <a href="http://maheshwari.org/user/main.aspx"><img src="http://www.maheshwari.org/img/user/newschema/guru.gif" id="guru"></a>
-                <a href="http://maheshwari.org/user/main.aspx"><img src="http://www.maheshwari.org/img/user/newschema/yantra.gif" id="yantra"></a>
-                <div class="logo_box">
-                    <a href="http://maheshwari.org/user/main.aspx"><img src="http://www.maheshwari.org/img/user/newschema/header.png" class="logo-pic" /></a>
-                </div>
-                <div class="right_box">
-                    <form class="login-box" action="http://maheshwari.org/user/loged.aspx" method="post">
-                        <div>
-                            <input type="text" name="Matcode" placeholder="Profile Id" id="uid" />
-                            <input type="password" name="Password" placeholder="Password" id="pwd" />
-                            <input type="hidden" id="fltr" name="fltr" />
-                            <button class="btn btn-primary" style="margin-top : -5px " onclick="loginfunc()">Login</button>
-                        </div>
-                        <div class="box-small" style="margin-top:-10px">
-                            <input type="checkbox" checked name="loggedin" id="loggedin" />
-                            <label class="tiny" style="color:white;font-family: 'Montserrat', sans-serif;">Keep me logged in</label>
-                            <label class="forgot tiny" style="margin-left:20px;"><a href="http://maheshwari.org/user/forgotpassword.aspx" style="color:white;">Forgot password?</a></label>
-                        </div>
-                    </form>
-                </div>
+<body id="page-top" class="index">
+    <nav class="menu navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Maheshwari.org</a>
             </div>
-            <nav class=" menu navbar navbar-default navbar-static-top" role="navigation" style="  background-color : #F7AB3B; margin-top:20px">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="navbar-header" style="width:15px">
-                        <a class="toggle-nav" href="#"><img src="http://www.maheshwari.org/img/user/newschema/header.png" class="logo-pic" /> </a>
-                    </div>
-                </div>
-                <div class="collapse navbar-collapse" id="example-navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li style="font-family: arial"><a href="http://maheshwari.org/user/main.aspx"><strong>Home</strong></a></li>
-                        <li style="font-family: arial"><a href="http://maheshwari.org/user/login.aspx"><strong>Login</strong></a></li>
-                        <li style="font-family: arial"><a href="http://maheshwari.org/user/register.aspx"><strong>Register</strong></a></li>
-                        <li class="dropdown" style="font-family: arial">
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="http://maheshwari.org/user/main.aspx">Home</a></li>
+                <li><a href="http://maheshwari.org/user/login.aspx">Login</a></li>
+                <li><a href="http://maheshwari.org/user/register.aspx">Register</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Search
+               <b class = "caret"></b>
+            </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://maheshwari.org/user/general.aspx">Basic</a></li>
+                        <li><a href="http://maheshwari.org/user/advance.aspx">Advanced</a></li>
+                        <li><a href="http://maheshwari.org/user/city.aspx">City</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <strong>Search</strong>
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu" style="background-color : #F7AB3B">
-                                <li><a href="http://maheshwari.org/user/general.aspx"><strong>Basic</strong></a></li>
-                                <li><a href="http://maheshwari.org/user/advance.aspx"><strong>Advanced</strong></a></li>
-                                <li><a href="http://maheshwari.org/user/city.aspx"><strong>City</strong></a></li>
+               Top Searches 
+               <b class = "caret"></b>
+            </a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="http://maheshwari.org/user/link.aspx?col=manglik&status=yes&u=9">Manglik</a>
+                                    <li><a href="http://maheshwari.org/user/link.aspx?col=marstatus&status=_unmarried&u=0">Divorcee/Widow</a></li>
+                                    <li><a href="http://maheshwari.org/user/link.aspx?col=country&status=_india&u=1">NRI</a></li>
+                            </ul>
+                            <li class="divider"></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Search By Education
+               <b class = "caret"></b>
+            </a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="http://maheshwari.org/user/link.aspx?col=education&status=d&u=2">Doctors</a></li>
+                                    <li><a href="http://maheshwari.org/user/link.aspx?col=education&status=e&u=3">Engineers</a></li>
+                                    <li><a href="http://maheshwari.org/user/link.aspx?col=education&status=m&u=4">MBA, MCA</a></li>
+                                    <li><a href="http://maheshwari.org/user/link.aspx?col=education&status=p&u=5">CA, CS, ICWA</a></li>
+                                </ul>
+                                <li class="divider"></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <strong>Top Searches</strong>
-                                        <b class="caret"></b>
-                                    </a>
+               Search By Occupation
+               <b class = "caret"></b>
+            </a>
                                     <ul class="dropdown-submenu">
-                                        <li><a href="http://maheshwari.org/user/link.aspx?col=manglik&status=yes&u=9">&#9656;Manglik</a>
-                                            <li><a href="http://maheshwari.org/user/link.aspx?col=marstatus&status=_unmarried&u=0">&#9656;Divorcee/Widow</a></li>
-                                            <li><a href="http://maheshwari.org/user/link.aspx?col=country&status=_india&u=1">&#9656;NRI</a></li>
+                                        <li><a href="http://maheshwari.org/user/link.aspx?col=pstatus&status=service&u=6">Service</a></li>
+                                        <li><a href="http://maheshwari.org/user/link.aspx?col=pstatus&status=business&u=8">Business</a></li>
+                                        <li><a href="http://maheshwari.org/user/link.aspx?col=pstatus&status=profession&u=7">Profession</a></li>
                                     </ul>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <strong> Search By Education</strong>
-                                            <b class="caret"></b>
-                                        </a>
-                                        <ul class="dropdown-submenu">
-                                            <li><a href="http://maheshwari.org/user/link.aspx?col=education&status=d&u=2">&#9656;Doctors</a></li>
-                                            <li><a href="http://maheshwari.org/user/link.aspx?col=education&status=e&u=3">&#9656;Engineers</a></li>
-                                            <li><a href="http://maheshwari.org/user/link.aspx?col=education&status=m&u=4">&#9656;MBA, MCA</a></li>
-                                            <li><a href="http://maheshwari.org/user/link.aspx?col=education&status=p&u=5">&#9656;CA, CS, ICWA</a></li>
-                                        </ul>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                <strong> Search By Occupation </strong>
-                                                <b class="caret"></b>
-                                            </a>
-                                            <ul class="dropdown-submenu">
-                                                <li><a href="http://maheshwari.org/user/link.aspx?col=pstatus&status=service&u=6">&#9656;Service</a></li>
-                                                <li><a href="http://maheshwari.org/user/link.aspx?col=pstatus&status=business&u=8">&#9656;Business</a></li>
-                                                <li><a href="http://maheshwari.org/user/link.aspx?col=pstatus&status=profession&u=7">&#9656;Profession</a></li>
-                                            </ul>
-                                            <li>
-                                                <form action="http://maheshwari.org/user/profile.aspx">
-                                                    <input type="text" name="id" class="search-txt" placeholder="Search By ID" />
-                                                    <button class="btn btn-primary">Go</button>
-                                                </form>
-                                            </li>
-                                            <li>
-                                                <form action="http://maheshwari.org/user/namesearch.aspx"><strong>&#9656;Find a Member</strong>
-                                                    <br>
-                                                    <input type="text" name="name" class="search-txt" placeholder="Name" onblur="this.value = this.value.replace(',',''); if(this.value.trim().length == 1) this.value='';">
-                                                    <br>
-                                                    <input type="text" name="surname" class="search-txt" placeholder="Lastname" onblur="this.value = this.value.replace(',',''); if(this.value.trim().length == 1) this.value='';">
-                                                    <button class="btn btn-primary">Go</button>
-                                                </form>
-                                            </li>
-                            </ul>
-                            </li>
-                            <li style="font-family: arial"><a href="http://maheshwari.org/user/payment-options.aspx"><strong>Membership </strong></a></li>
-                            <li class="dropdown" style="font-family: arial">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <strong>Help</strong>
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" style="background-color : #F7AB3B;">
-                                    <li><a href="http://maheshwari.org/user/contact.aspx"><strong>Contact Us</strong></a></li>
-                                    <li><a href="http://maheshwari.org/user/feedback.aspx"><strong>Feedback</strong></a></li>
-                                </ul>
-                            </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div id="inline-form" class="row mt">
+                                            <div class="col-lg-12 xs-hidden lg-visible">
+                                                <div class="form-panel animated bounceInLeft">
+                                                    <form class="form-inline" role="form" action="http://maheshwari.org/user/profile.aspx">
+                                                        <div class="form-group ">
+                                                            <label class="sr-only" for="exampleInputEmail2">Search By Id</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Search By Id" name="id">
+                                                        </div>
+                                                        <button type="submit" class="btn btn-info">Submit</button>
+                                                    </form>
+                                                </div>
+                                                <!-- /form-panel -->
+                                            </div>
+                                            <!-- /col-lg-12 -->
+                                        </div>
+                                        <li>
+                                            <div id="inline-form" class="row mt">
+                                                <div class="col-lg-12 xs-hidden lg-visible">
+                                                    <div class="form-panel animated bounceInLeft">
+                                                        <form class="form-inline" role="form" action="http://maheshwari.org/user/namesearch.aspx"><strong>Find a member</strong>
+                                                            <div class="form-group ">
+                                                                <label class="sr-only" for="exampleInputEmail3">Find a member</label>
+                                                                <input type="text" name="name" class="search-txt form-control" placeholder="Name" onblur="this.value = this.value.replace(',',''); if(this.value.trim().length == 1) this.value='';">
+                                                                <br>
+                                                                <input type="text" name="surname" class="search-txt form-control" placeholder="Last name" onblur="this.value = this.value.replace(',',''); if(this.value.trim().length == 1) this.value='';">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-info">Search</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                     </ul>
-                </div>
-            </nav>
+                    </li>
+                    <li><a href="http://maheshwari.org/user/payment-options.aspx">Membership </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Help
+               <b class = "caret"></b>
+            </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://maheshwari.org/user/contact.aspx">Contact Us</a></li>
+                            <li><a href="http://maheshwari.org/user/feedback.aspx">Feedback</a></li>
+                        </ul>
+                    </li>
+            </ul>
         </div>
+    </nav>
+    <div class="center-block z" style="position:fixed">
+        <a class="page-scroll btn btn-primary" href="#portfolio1" style="background-color: #F7822E;">Personal</a>
+        <br><br>
+        <a class="page-scroll btn btn-primary" href="#portfolio2" style="background-color: #F7822E;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Family</a>
+        <br><br>
+        <a class="page-scroll btn btn-primary" href="#portfolio3" style="background-color: #F7822E;">&nbsp;&nbsp;&nbsp;&nbsp;Album</a>
+        <br><br>
+        <a class="page-scroll btn btn-primary" href="#portfolio4" style="background-color: #F7822E;">Horoscope</a>
     </div>
-    <div id="pagepiling" style="font-size: 18px;">
-        <div class="section page1">
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio1">
         <div class="container">
+        <h1>Personal Details</h1>
             <div class="row">
-                <span class="col-xs-1"></span>
-                <div class="well col-sm-10" style="font-size:18px;background-color:#F97E00;">
-                    <strong>Rajesh Maheshwari</strong>
-                </div>
-                <span class="col-xs-1"></span>
-            </div>
-            <div class="row">
-                <span class="col-xs-1"></span>
-                <div class="col-xs-5">
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <strong>Gender:</strong> Male
-                                <br />
-                                <strong>Marital Status:</strong> Unmarried
-                                <br />
-                                <strong>Age:</strong> 31 yrs
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Height:</strong> 5' 5"
-                                <br />
-                                <strong>Complexion:</strong> Wheatish Fair
-                                <br />
-                                <strong>Body Type:</strong> Slim
-                                <br />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Mayank Pratap</strong></div>
+                        <div class="panel-body">
+                            <img class="img-responsive" src="profile.png">
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-5">
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <strong>Gender:</strong> Male
-                                <br />
-                                <strong>Marital Status:</strong> Unmarried
-                                <br />
-                                <strong>Age:</strong> 31 yrs
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Height:</strong> 5' 5"
-                                <br />
-                                <strong>Complexion:</strong> Wheatish Fair
-                                <br />
-                                <strong>Body Type:</strong> Slim
-                                <br />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Personal Details</div>
+                        <div class="panel-body">
+                            <strong>Gender:</strong> Male
+                            <br>
+                            <strong>Marital Status:</strong> Unmarried
+                            <br>
+                            <strong>Age:</strong> 31 yrs
+                            <br>
+                            <strong>Height:</strong> 5' 5"
+                            <br>
+                            <strong>Complexion:</strong> Wheatish Fair
+                            <br>
+                            <strong>Body Type:</strong> Slim
                         </div>
                     </div>
                 </div>
-                <span class="col-xs-1"></span>
-            </div>
-            <div class="row">
-                <span class="col-xs-1"></span>
-                <div class="col-xs-5">
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <strong>Gender:</strong> Male
-                                <br />
-                                <strong>Marital Status:</strong> Unmarried
-                                <br />
-                                <strong>Age:</strong> 31 yrs
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Height:</strong> 5' 5"
-                                <br />
-                                <strong>Complexion:</strong> Wheatish Fair
-                                <br />
-                                <strong>Body Type:</strong> Slim
-                                <br />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Education & Occupation Details</div>
+                        <div class="panel-body">
+                            <strong>Qualification:</strong> P.G.D.M (M.B.A)MARKETING
+                            <br>
+                            <strong>Annual Income:</strong> Above 50 Lac
+                            <br>
+                            <strong>Occupation:</strong> Business
+                            <br>
+                            <strong>Designation:</strong> Involove In Father Bussiness
+                            <br>
+                            <strong>Company:</strong> Not Set
+                            <br>
+                            <strong>City:</strong> Jagdalpur
+                            <br>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-5">
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <strong>Gender:</strong> Male
-                                <br />
-                                <strong>Marital Status:</strong> Unmarried
-                                <br />
-                                <strong>Age:</strong> 31 yrs
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Height:</strong> 5' 5"
-                                <br />
-                                <strong>Complexion:</strong> Wheatish Fair
-                                <br />
-                                <strong>Body Type:</strong> Slim
-                                <br />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Horoscope Details</div>
+                        <div class="panel-body">
+                            <strong>Date of Birth:</strong> 30-Sep-1990 10:00 AM
+                            <br>
+                            <strong>Place of Birth:</strong> Jagdalpur
+                            <br>
+                            <strong>Manglik:</strong> No
+                            <br>
+                            <strong>Horoscope:</strong> No
                         </div>
                     </div>
                 </div>
-                <span class="col-xs-1"></span>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Family Details</div>
+                        <div class="panel-body">
+                            <strong>Family Status:</strong> Higher_Standard
+                            <br>
+                            <strong>Native Place:</strong> JAGDALPUR
+                            <br>
+                            <strong>Unmarried Brothers:</strong> 0
+                            <br>
+                            <strong>Married Brothers:</strong> 0
+                            <br>
+                            <strong>Unmarried Sisters:</strong> 1
+                            <br>
+                            <strong>Married Sisters:</strong> 1
+                            <br>
+                            <strong>Gotra:</strong> Rathi
+                            <br>
+                            <strong>Mama Surname:</strong> Chandak
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">More About Me</div>
+                        <div class="panel-body"> <strong>Hobbies:</strong> Reading Dancing
+                            <br>
+                            <strong>Partner Preference:</strong> A GENUINE, OPEN MINDED AND EDUCATED BOY,</div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
-        <div class="section page1">
+    </section>
+    <section id="portfolio2">
+    <button id="preview" class="btn btn-lg center-block" style="font-size: 22px">Preview</button>
+        <div class="container" id="test">
+        <h1>Family Details</h1>
             <div class="row">
-                <span class="col-xs-1"></span>
-                <div class="well col-sm-10" style="font-size:18px;background-color:#F97E00;">
-                    <strong>Rajesh Maheshwari</strong>
-                </div>
-                <span class="col-xs-1"></span>
-            </div>
-            <div class="row">
-                <span class="col-xs-1"></span>
-                <div class="col-xs-5">
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <strong>Gender:</strong> Male
-                                <br />
-                                <strong>Marital Status:</strong> Unmarried
-                                <br />
-                                <strong>Age:</strong> 31 yrs
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Height:</strong> 5' 5"
-                                <br />
-                                <strong>Complexion:</strong> Wheatish Fair
-                                <br />
-                                <strong>Body Type:</strong> Slim
-                                <br />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Contact Details</div>
+                        <div class="panel-body">
+
+                            <h4></h4>
+                            <strong>Father:</strong> Manoj Rathi<br>
+                            <strong>Grand Father:</strong> Not Set<br>
+                            <strong>Native Place:</strong> Jagdalpur<br>
+                            <strong>About Family:</strong> WE ARE A VERY CLOSE KNIT, EDUCATED ,FUN LOVE FAMILY..............<br>
+                            <strong>Residence Address:</strong> Jain Mandir Rode<br>
+                            Jagdalpur 49001, Chhattisgarh
+                            India
+                            <strong>Contact Number:</strong> +91-9425590309, +91-9425590309<br>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-5">
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <strong>Gender:</strong> Male
-                                <br />
-                                <strong>Marital Status:</strong> Unmarried
-                                <br />
-                                <strong>Age:</strong> 31 yrs
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Height:</strong> 5' 5"
-                                <br />
-                                <strong>Complexion:</strong> Wheatish Fair
-                                <br />
-                                <strong>Body Type:</strong> Slim
-                                <br />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Self:</div>
+                        <div class="panel-body">
+                            <strong></strong> GARIMA RATHI<br>
+<strong>Firm Name:</strong> NOT SET<br>
+<strong>City:</strong> Jagdalpur<br>
+<strong>Designation:</strong> BUSINESSMAN<br>
+<strong>Phone:</strong> +91-0778222636<br>
+<strong>Firm Details:</strong> NONE<br>
                         </div>
                     </div>
                 </div>
-                <span class="col-xs-1"></span>
-            </div>
-            <div class="row">
-                <span class="col-xs-1"></span>
-                <div class="col-xs-5">
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <strong>Gender:</strong> Male
-                                <br />
-                                <strong>Marital Status:</strong> Unmarried
-                                <br />
-                                <strong>Age:</strong> 31 yrs
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Height:</strong> 5' 5"
-                                <br />
-                                <strong>Complexion:</strong> Wheatish Fair
-                                <br />
-                                <strong>Body Type:</strong> Slim
-                                <br />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Mamaji</div>
+                        <div class="panel-body">
+<strong>Mamaji:</strong> NOT SET<br>
+<strong>Firm Name:</strong>NOT SET<br>
+<strong>City:</strong> Jagdalpur<br>
+<strong>Designation:</strong> BUSINESSMAN<br>
+<strong>Phone:</strong> +91-0778222636<br>
+<strong>Firm Details:</strong> NOT SET<br>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-5">
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <strong>Gender:</strong> Male
-                                <br />
-                                <strong>Marital Status:</strong> Unmarried
-                                <br />
-                                <strong>Age:</strong> 31 yrs
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Height:</strong> 5' 5"
-                                <br />
-                                <strong>Complexion:</strong> Wheatish Fair
-                                <br />
-                                <strong>Body Type:</strong> Slim
-                                <br />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Brother</div>
+                        <div class="panel-body">
+
+<strong>Brother:</strong> MANOJ RATHI<br>
+<strong>Firm Name:</strong>NOT SET<br>
+<strong>City:</strong> Jagdalpur<br>
+<strong>Designation:</strong> BUSINESSMAN<br>
+<strong>Phone:</strong> +91-0778222636<br>
+<strong>Firm Details:</strong> NOT SET<br>
                         </div>
                     </div>
                 </div>
-                <span class="col-xs-1"></span>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Brother</div>
+                        <div class="panel-body"> <strong>Brother:</strong> NOT SETFirm Name:</strong>NOT SET<br>
+<strong>City:</strong> Jagdalpur<br>
+<strong>Designation:</strong> BUSINESSMAN<br>
+<strong>Phone:</strong> +91-0778222636<br>
+<strong>Firm Details:</strong> NOT SET<br>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="section">
-            <div class="panel panel-default">
-                <div class="panel-heading" style="font-size:18px;background-color:#F97E00;">
-                    <strong>Rajesh Maheshwari</strong>
+    </section>
+    <section id="portfolio3">
+        <div class="container">
+                <h1>Photo Album</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Photo</strong></div>
+                        <div class="panel-body">
+                            <img class="img-responsive" src="profile.png">
+                        </div>
+                    </div>
                 </div>
-                <div class="panel-body" style="background-color : rgb(255, 249, 221)">
-                    <ul class="nav nav-pills">
-                        <li class=""><a href="#home-pills" data-toggle="tab">Personal Details</a>
-                        </li>
-                        <li class=""><a href="#profile-pills" data-toggle="tab">Educational Details</a>
-                        </li>
-                        <li class=""><a href="#messages-pills" data-toggle="tab">Horoscope Details</a>
-                        </li>
-                        <li class="active"><a href="#settings-pills" data-toggle="tab">Family Details</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade" id="home-pills">
-                            <h4>Personal Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Photo</strong></div>
+                        <div class="panel-body">
+                            <img class="img-responsive" src="cake.png">
                         </div>
-                        <div class="tab-pane fade" id="profile-pills">
-                            <h4>Educational Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Photo</strong></div>
+                        <div class="panel-body">
+                            <img class="img-responsive" src="cabin.png">
                         </div>
-                        <div class="tab-pane fade" id="messages-pills">
-                            <h4>Horoscope Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Photo</strong></div>
+                        <div class="panel-body">
+                            <img class="img-responsive" src="circus.png">
                         </div>
-                        <div class="tab-pane fade active in" id="settings-pills">
-                            <h4>Family Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Photo</strong></div>
+                        <div class="panel-body">
+                            <img class="img-responsive" src="game.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Photo</strong></div>
+                        <div class="panel-body">
+                            <img class="img-responsive" src="safe.png">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section">
-            <div class="panel panel-default">
-                <div class="panel-heading" style="font-size:18px;background-color:#F97E00;">
-                    <strong>Rajesh Maheshwari</strong>
+    </section>
+    <section id="portfolio4">
+        <div class="container">
+                <h1 class="dec">Horoscope Details</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Birth Details</div>
+                        <div class="panel-body">
+                           <strong> Date Of Birth : </strong> 30 Sep 1990
+                           <br/>
+                            <strong>Time Of Birth : </strong>10:00 AM
+                            <br/> 
+                            <strong>Place Of Birth:</strong> Jagdalpur 
+                            <br/>
+                           <strong>Time Zone:</strong> 5:30 E
+                           <br/>
+                            <strong>Latitude:</strong> 19.07
+                            <br/>
+
+<strong>Longitude 82.03</strong>
+                        </div>
+                    </div>
                 </div>
-                <div class="panel-body" style="background-color : rgb(255, 249, 221)">
-                    <ul class="nav nav-pills">
-                        <li class=""><a href="#home-pills" data-toggle="tab">Personal Details</a>
-                        </li>
-                        <li class=""><a href="#profile-pills" data-toggle="tab">Educational Details</a>
-                        </li>
-                        <li class=""><a href="#messages-pills" data-toggle="tab">Horoscope Details</a>
-                        </li>
-                        <li class="active"><a href="#settings-pills" data-toggle="tab">Family Details</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade" id="home-pills">
-                            <h4>Personal Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Education & Occupation Details</div>
+                        <div class="panel-body">
+                            <strong>Qualification:</strong> P.G.D.M (M.B.A)MARKETING
+                            <br>
+                            <strong>Annual Income:</strong> Above 50 Lac
+                            <br>
+                            <strong>Occupation:</strong> Business
+                            <br>
+                            <strong>Designation:</strong> Involove In Father Bussiness
+                            <br>
+                            <strong>Company:</strong> Not Set
+                            <br>
+                            <strong>City:</strong> Jagdalpur
+                            <br>
                         </div>
-                        <div class="tab-pane fade" id="profile-pills">
-                            <h4>Educational Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Horoscope Details</div>
+                        <div class="panel-body">
+                            <strong>Date of Birth:</strong> 30-Sep-1990 10:00 AM
+                            <br>
+                            <strong>Place of Birth:</strong> Jagdalpur
+                            <br>
+                            <strong>Manglik:</strong> No
+                            <br>
+                            <strong>Horoscope:</strong> No
                         </div>
-                        <div class="tab-pane fade" id="messages-pills">
-                            <h4>Horoscope Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Family Details</div>
+                        <div class="panel-body">
+                            <strong>Family Status:</strong> Higher_Standard
+                            <br>
+                            <strong>Native Place:</strong> JAGDALPUR
+                            <br>
+                            <strong>Unmarried Brothers:</strong> 0
+                            <br>
+                            <strong>Married Brothers:</strong> 0
+                            <br>
+                            <strong>Unmarried Sisters:</strong> 1
+                            <br>
+                            <strong>Married Sisters:</strong> 1
+                            <br>
+                            <strong>Gotra:</strong> Rathi
+                            <br>
+                            <strong>Mama Surname:</strong> Chandak
                         </div>
-                        <div class="tab-pane fade active in" id="settings-pills">
-                            <h4>Family Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">More About Me</div>
+                        <div class="panel-body"> <strong>Hobbies:</strong> Reading Dancing
+                            <br>
+                            <strong>Partner Preference:</strong> A GENUINE, OPEN MINDED AND EDUCATED BOY,</div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
     </div>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-            menu: null,
-            anchors: ['page1', 'page2', 'page3', 'page4'],
-            direction: 'horizontal'
-        });
-    });
-    </script>
-    <script type="text/javascript" src="http://www.maheshwari.org/js/newschema/scrolltie.js"></script>
-    <script type="text/javascript" src="http://www.maheshwari.org/js/newschema/menu.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
 </body>
 
 </html>
